@@ -1,0 +1,6 @@
+Package: 2HOL
+Version: %VERSION%
+Architecture: amd64
+Maintainer: 0xadk <0xadk@users.noreply.github.com>
+Depends: libsdl1.2debian, libglu1-mesa
+Description: A fork of the popular open source game One Hour One Life

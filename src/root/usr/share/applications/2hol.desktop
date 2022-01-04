@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Two Hours One Life
+Comment=A fork of the popular open source game One Hour One Life
+Path=/usr/share/2hol
+Exec=/usr/share/2hol/OneLifeApp
+Icon=2hol
+Type=Application
+Categories=Game;
+Terminal=false
