@@ -16,7 +16,7 @@ cp -r "$THOL_CLIENT_BUILD" "$THOL_BUILD_DIR/root/usr/share/2hol"
 
 sed -i "s|%VERSION%|$THOL_VERSION|" "$THOL_BUILD_DIR/root/DEBIAN/control"
 
-# Allowy anyone to read and write the game files. While this isn't the best
+# Allow anyone to read and write the game files. While this isn't the best
 # solution by any stretch, it is the simplest. Since the way 2hol works is
 # by stores cache and user settings in the same directory as the executable.
 chmod -R 777 "$THOL_BUILD_DIR/root/usr"
