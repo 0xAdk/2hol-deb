@@ -1,13 +1,14 @@
 #!/usr/bin/env sh
 
-: ${THOL_SRC_DIR:="./src/"}
-: ${THOL_CLIENT_BUILD:="./$THOL_SRC_DIR/2hol_client_build"}
-: ${THOL_BUILD_DIR:="./build/"}
+: "${THOL_SRC_DIR:=src}"
+: "${THOL_CLIENT_BUILD:=$THOL_SRC_DIR/2hol_client_build}"
+: "${THOL_BUILD_DIR:="build"}"
 
 if [ -e "$THOL_CLIENT_BUILD/dataVersionNumber.txt" ]; then
-	: ${THOL_VERSION:=$(cat "$THOL_CLIENT_BUILD/dataVersionNumber.txt")}
+	: "${THOL_VERSION:=$(cat "$THOL_CLIENT_BUILD/dataVersionNumber.txt")}"
 else
-	echo -e "ERROR:\n    The file used to get the game version ($THOL_CLIENT_BUILD/dataVersionNumber.txt) doesn't exist"
+	echo "$THOL_CLIENT_BUILD/dataVersionNumber.txt doesn't exist"
+	echo "error: unable to find game version"
 	exit 1
 fi
 
